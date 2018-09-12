@@ -16,7 +16,7 @@ router.get(/index1/, function(req, res, next) {
       result += chunk
     })
     res.on('end', function() {
-      Res.render('index', { title: 'Express', result: JSON.parse(result)});
+      Res.render('home/index', { title: 'Express222222', result: JSON.parse(result)});
     })
   })
   // Res.render('index', { title: 'Express' });
