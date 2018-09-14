@@ -1,5 +1,6 @@
 var inquirer = require('inquirer')
 var selectLine = require('inquirer-select-line')
+var spawn = require('child_process').spawn
 // inquirer.prompt([ { 
 //   type: 'confirm', 
 //   name: 'test', 
@@ -86,4 +87,24 @@ var questions =  [
 ]
 inquirer.prompt(questions).then(function (answers) {
   console.log(answers)
+  var cmd = ''
+  var command = 'node demo2.js'
+  if (/^win/.test(process.platform)) {
+    // cmd = spawn('cmd', ['/s', '/c', command], { stdio: 'inherit' });
+    cmd = spawn('cmd', ['/s', '/c', command]);
+  } else {
+    cmd = spawn('/bin/sh', ['-c', command], { stdio: 'inherit' })
+  }
+  cmd.stdout.on('data', function (data) {
+    console.log(JSON.stringify(data))
+    process.stdout.write(data)
+  })
+
+  cmd.stderr.on('data', function (data) {
+    process.stderr.write(data)
+  })
+
+  cmd.on('exit', function (code) {
+    console.log(code)
+  })
 })
