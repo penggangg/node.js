@@ -1,0 +1,19 @@
+{
+  "name": "inquirers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "demo1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "inquirer": "^6.2.0"
+  },
+  "dependencies": {
+    "fuzzy": "^0.1.3",
+    "inquirer-checkbox-plus-prompt": "^1.0.1",
+    "inquirer-select-line": "^1.1.1"
+  }
+}
