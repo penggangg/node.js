@@ -1,3 +1,4 @@
+// 数据请求
 var http = require('http')
 var querystring = require('querystring')
 

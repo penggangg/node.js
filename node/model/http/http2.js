@@ -5,7 +5,7 @@ var express = require('express')
 var app = express()
 app.use(bodyParser.urlencoded({ extended: false })); 
 app.get('/', function(req,res){
-    res.send('hello express')
+    res.send('hello express 哈哈')
 })
 app.get('/index', function(req,res){
     console.log(req.query)
