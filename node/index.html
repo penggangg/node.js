@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .demo1 {
+            display: inline-block;
+            overflow: hidden;
+            width: 50px;
+            height: 30px;
+            line-height: 30px;
+            background: red;
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>  
+    <div class="box">
+        <span>123</span>
+        <span class="demo1">456</span>
+        <span>789</span>
+    </div>
+</body>
+<script>
+    var nums = [-1, 0, 1, 2, -1, -4];
+    // nums=Array.from(new Set(nums));
+    for (let i = 0; i < nums.length; i++) {
+        var a = nums[i];
+        var b = nums[i+1];
+        for (let j = i+1; j < nums.length; j++) {
+            if (a+b+nums[j]==0){
+                console.log([a,b,nums[j]])
+            }
+        }
+    }
+</script>
+</html>

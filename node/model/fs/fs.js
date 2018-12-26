@@ -40,3 +40,6 @@ console.log(process.argv.slice(2))
 //     // 每个元素是此目录下的文件或文件夹的名称
 //     console.log(files);
 // });
+var data = fs.readFileSync('../http/uploads/upload_36b2275393dda6a4c7e618c851ab32a2');
+console.log(data)
+console.log(new Buffer(data).toString('base64'))
