@@ -1,0 +1,33 @@
+{
+	"meta": {
+		"ajaxType": "post",
+		"path": "/wantwant-server/kayzstock/list",
+		"type": "report",
+		"id": "sales_list",
+		"code": "sales_list",
+		"title": "销售数据表",
+		"buttons": [],
+		"columns":[],
+		"params": []
+	}
+}
+
+const kabjhgorder = require('./kabjhgorder.json')
+const kabjhgstock = require('./kabjhgstock.json')
+const kabjhgsale = require('./kabjhgsale.json')
+
+const kajlforder = require('./kajlforder.json')
+
+const kashlhorder = require('./kashlhorder.json')
+const kashlhstock = require('./kashlhstock.json')
+const kashlhsale = require('./kashlhsale.json')
+
+
+const kasjlhorder = require('./kasjlhorder.json')
+const kasjlhstock = require('./kasjlhstock.json')
+const kasjlhsale = require('./kasjlhsale.json')
+
+
+const kayzorder = require('./kayzorder.json')
+const kayzstock = require('./kayzstock.json')
+const kayzsale = require('./kayzsale.json')

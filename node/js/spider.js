@@ -26,21 +26,22 @@ function startRequest (currentPage) {
         res.on('end', function() {
             var $ = cheerio.load(html);
             i++;
-            $('.contList').each(function () {
-                var houseObj = {};
-                houseObj.title = $(this).find('.leftSize h3 a').text();
-                houseObj.price = decodeURI($(this).find('.rightCern li span').text()).trim();
-                houseObj.img_src = $(this).find('.listImg img').attr('data-src');
-                houseArray.push(houseObj);
-            })
-            if (i == 11) {
-                savedContent($,houseArray);  //存储每篇文章的内容及文章标题
-                savedImg($);    //存储每篇文章的图片及图片标题
-            }
-            // 这是亮点之一，通过控制I,可以控制爬取多少篇文章.
-            if (i <= 10) {  
-                fetchPage('http://www.lizihang.com/bj-xf/p' + i)             
-            }
+            console.log($('.contList').eq(0).find('.leftSize h3 a').text());
+            // $('.contList').each(function () {
+            //     var houseObj = {};
+            //     houseObj.title = $(this).find('.leftSize h3 a').text();
+            //     houseObj.price = decodeURI($(this).find('.rightCern li span').text()).trim();
+            //     houseObj.img_src = $(this).find('.listImg img').attr('data-src');
+            //     houseArray.push(houseObj);
+            // })
+            // if (i == 11) {
+            //     savedContent($,houseArray);  //存储每篇文章的内容及文章标题
+            //     savedImg($);    //存储每篇文章的图片及图片标题
+            // }
+            // // 这是亮点之一，通过控制I,可以控制爬取多少篇文章.
+            // if (i <= 10) {  
+            //     fetchPage('http://www.lizihang.com/bj-xf/p' + i)             
+            // }
           });
     })
 }

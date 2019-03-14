@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "inquirer": "^6.2.0"
+    "inquirer": "^6.2.2",
+    "toast": "^1.0.4"
   },
   "dependencies": {
     "child_process": "^1.0.2",

@@ -74,7 +74,7 @@ var questions =  [
   },{
     when: function(response){
       if(!response.alignment && !response.mock) {
-        console.log('你不选择mock 也选择真实环境。你要闹那样？ 我不管了，你就是要启动真实环境😊！')
+        console.log('你不选择mock 也不选择真实环境。你要闹那样？ 我不管了，你就是要启动真实环境😊！')
       }
       return response.alignment
     },
@@ -82,7 +82,7 @@ var questions =  [
     name: 'address',
     // default: history.address || 0,
     message: '选一个真实环境的地址',
-    choices: [ 'app', 'hphManage', 'HuiStore', 'tms-h5' ]
+    choices: [ 'app1', 'hphManage1', 'HuiStore1', 'tms-h51' ]
   }
 ]
 inquirer.prompt(questions).then(function (answers) {
