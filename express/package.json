@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "pm2": "pm2 start pm2.json"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",

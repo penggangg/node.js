@@ -1,0 +1,11 @@
+{
+    "apps": {
+        "name": "penggang",                               
+        "script": "./bin/www",                     
+        "cwd": "./",                               
+        "args": "",                                 
+        "interpreter": "",                          
+        "interpreter_args": "",                    
+        "watch": true                         
+    }
+}

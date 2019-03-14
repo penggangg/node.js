@@ -88,7 +88,8 @@ var questions =  [
 inquirer.prompt(questions).then(function (answers) {
   console.log(answers)
   var cmd = ''
-  var command = 'node demo2.js'
+  // var command = 'node demo2.js'
+  var command = 'npm run dev'
   if (/^win/.test(process.platform)) {
     // cmd = spawn('cmd', ['/s', '/c', command], { stdio: 'inherit' });
     cmd = spawn('cmd', ['/s', '/c', command]);
