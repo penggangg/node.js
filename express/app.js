@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 // require('./config')
 var indexRouter = require('./routes/allApi');
+var indexRouter1 = require('./routes/index');
 var usersRouter = require('./routes/users');
 var doubanRouter = require('./routes/douban');
 var upload = require('./routes/upload')
@@ -20,7 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/', indexRouter1);
 app.use('/users', usersRouter);
 app.use('/douban', doubanRouter);
 app.use('/upload', upload);

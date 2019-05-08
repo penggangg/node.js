@@ -40,6 +40,29 @@ console.log(process.argv.slice(2))
 //     // 每个元素是此目录下的文件或文件夹的名称
 //     console.log(files);
 // });
-var data = fs.readFileSync('../http/uploads/upload_36b2275393dda6a4c7e618c851ab32a2');
-console.log(data)
-console.log(new Buffer(data).toString('base64'))
+// var data = fs.readFileSync('../http/uploads/upload_36b2275393dda6a4c7e618c851ab32a2');
+// console.log(data)
+// console.log(new Buffer(data).toString('base64'))
+// 流的操作
+var rs = fs.createReadStream('../../js/image/demo.jpg')
+var ws = fs.createWriteStream('../img/pipe1.png')
+// rs.pipe(ws)
+//3.监听流的打开和关闭
+ws.once('open' ,()=>{
+    console.log("读入通道打开");
+});
+ws.once('close' ,()=>{
+    console.log("读入通道以关闭");
+});
+ 
+rs.once('open' ,()=>{
+    console.log("写出通道已打开");
+});
+rs.once('close' ,()=>{
+    console.log("写出通道已关闭");
+});
+//4.绑定data
+rs.on("data", (data)=>{
+    console.log(data)
+    ws.write(data);
+});
